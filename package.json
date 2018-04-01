@@ -1,0 +1,29 @@
+{
+  "name": "svelte-quotes",
+  "version": "1.0.0",
+  "description": "A demo app of Svelte that displays quotes",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "webpack -w",
+    "server": "node server.js",
+    "start": "npm run build && npm run server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "svelte"
+  ],
+  "author": "John Hannah",
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "express": "^4.16.3",
+    "html-webpack-plugin": "^3.1.0",
+    "svelte": "^1.59.0",
+    "svelte-loader": "^2.5.1",
+    "webpack": "^3.11.0",
+    "webpack-cli": "^2.0.13"
+  }
+}
