@@ -10,18 +10,26 @@
 </div>
 
 <script type="text/javascript">
-import Quotes from './Quotes.svelte';
+  import Quotes from './Quotes.svelte';
+
+  // async data fetching function
+  const fetchQuotes = async (data, component) => {
+    const response = await fetch(`http://quotesondesign.com/wp-json/posts?filter[order]=rand&filter[posts_per_page]=3`);
+    const json = await response.json();
+    const quotes = data.quotes.concat(json);
+    component.set({ quotes });
+  }
+
+  // export the default object
   export default {
+    oncreate() {
+      let data = this.get();
+      fetchQuotes(data, this);
+    },
     methods: {
       loadMoreQuotes() {
         let data = this.get();
-        const fetchQuotes = async () => {
-          const response = await fetch(`http://quotesondesign.com/wp-json/posts?filter[order]=rand&filter[posts_per_page]=5`);
-          const json = await response.json();
-          const quotes = data.quotes.concat(json);
-          this.set({ quotes });
-        }
-        fetchQuotes();
+        fetchQuotes(data, this);
       }
     },
     components: {

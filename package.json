@@ -10,7 +10,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "svelte"
+    "svelte",
+    "sveltejs",
+    "javascript"
   ],
   "author": "John Hannah",
   "license": "MIT",
@@ -23,7 +25,9 @@
     "html-webpack-plugin": "^3.1.0",
     "svelte": "^1.59.0",
     "svelte-loader": "^2.5.1",
-    "webpack": "^3.11.0",
+    "webpack": "^4.4.1"
+  },
+  "devDependencies": {
     "webpack-cli": "^2.0.13"
   }
 }
