@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack -w",
     "server": "node server.js",
-    "start": "npm run build && npm run server",
+    "start": "npm run build & npm run server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
