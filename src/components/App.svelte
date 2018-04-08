@@ -14,7 +14,7 @@
 
   // async data fetching function
   const fetchQuotes = async (data, component) => {
-    const response = await fetch(`https://quotesondesign.com/wp-json/posts?filter[order]=rand&filter[posts_per_page]=3`);
+    const response = await fetch(`http://quotesondesign.com/wp-json/posts?filter[order]=rand&filter[posts_per_page]=3`);
     const json = await response.json();
     const quotes = data.quotes.concat(json);
     component.set({ quotes });
