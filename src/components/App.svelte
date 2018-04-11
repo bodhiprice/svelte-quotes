@@ -59,14 +59,4 @@
     margin: 50px auto;
     max-width: 600px;
   }
-  .quote {
-    background: #efefef;
-    border: 1px solid #ccc;
-    font-size: 18px;
-    margin-bottom: 30px;
-    padding: 20px;
-  }
-  .author {
-    text-align: right;
-  }
 </style>
